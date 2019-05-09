@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([paraTD], [0.1.0], [larisch.larisch@kaust.edu.sa])
-AC_CONFIG_SRCDIR([src/paraTD.hpp])
+AC_INIT([TuckerDingens], [0.0.1], [mail@provider])
+AC_CONFIG_SRCDIR([src/Algebra.hpp])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([])
@@ -101,10 +101,6 @@ AC_LANG_PUSH([C++])
 # unconditional c++11
 CXXFLAGS="$CXXFLAGS -std=c++11"
 
-AC_CHECK_HEADERS([boost/tuple/tuple.hpp], [],
-		AC_MSG_ERROR([could not find a boost header])
-)
-
 AC_LANG_POP([C++])
 
 # BUG: in auto mode disable python if there are no headers...
@@ -131,9 +127,7 @@ else
 fi
 
 AC_CONFIG_FILES([Makefile])
-#AC_CONFIG_FILES([tests/Makefile])
 AC_CONFIG_FILES([interface/Makefile])
-#AC_CONFIG_FILES([interface/tests/Makefile])
 AC_CONFIG_FILES([src/Makefile])
 
 AC_OUTPUT

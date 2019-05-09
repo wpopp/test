@@ -11,10 +11,7 @@ AM_TESTS_ENVIRONMENT = \
     export PYTHONPATH='.:..:$(top_srcdir)/TuckerDingens';
 
 EXTRA_DIST = \
-	$(TESTS) \
-	NewCFGs.py \
-	base.py \
-	Graph.py
+	$(TESTS)
 
 $(TESTS:%.py=%.log): P
 .PHONY: P

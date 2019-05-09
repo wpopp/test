@@ -20,3 +20,5 @@ void MatMult(std::vector<std::vector<double> > &A, std::vector<double> &v, std::
 		}
 	}
 }
+
+}

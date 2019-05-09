@@ -1,1 +1,1 @@
-from paraTD import *
+from TuckerDingens import *

@@ -1,9 +1,6 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Define to 1 if you have the <boost/tuple/tuple.hpp> header file. */
-#define HAVE_BOOST_TUPLE_TUPLE_HPP 1
-
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H 1
 
@@ -41,31 +38,31 @@
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
-#define PACKAGE "paratd"
+#define PACKAGE "tuckerdingens"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "larisch.larisch@kaust.edu.sa"
+#define PACKAGE_BUGREPORT "mail@provider"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "paraTD"
+#define PACKAGE_NAME "TuckerDingens"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "paraTD 0.1.0"
+#define PACKAGE_STRING "TuckerDingens 0.0.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "paratd"
+#define PACKAGE_TARNAME "tuckerdingens"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.1.0"
+#define PACKAGE_VERSION "0.0.1"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "0.1.0"
+#define VERSION "0.0.1"
 
 /* Define to `__inline__' or `__inline' if that's what the C compiler
    calls it, or to nothing if 'inline' is not supported under any name.  */

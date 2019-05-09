@@ -69,10 +69,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/paratd
-pkgincludedir = $(includedir)/paratd
-pkglibdir = $(libdir)/paratd
-pkglibexecdir = $(libexecdir)/paratd
+pkgdatadir = $(datadir)/tuckerdingens
+pkgincludedir = $(includedir)/tuckerdingens
+pkglibdir = $(libdir)/tuckerdingens
+pkglibexecdir = $(libexecdir)/tuckerdingens
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -91,7 +91,9 @@ subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/am_check_python_headers.m4 \
 	$(top_srcdir)/m4/ax_compiler_vendor.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
@@ -160,8 +162,8 @@ CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in AUTHORS \
-	COPYING ChangeLog INSTALL NEWS README TODO compile \
-	config.guess config.sub install-sh ltmain.sh missing
+	COPYING ChangeLog INSTALL NEWS README compile config.guess \
+	config.sub depcomp install-sh ltmain.sh missing py-compile
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -204,13 +206,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/idot/projects/paraTD-dev/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/idot/projects/popp/test/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /home/idot/projects/paraTD-dev/missing autoconf
-AUTOHEADER = ${SHELL} /home/idot/projects/paraTD-dev/missing autoheader
-AUTOMAKE = ${SHELL} /home/idot/projects/paraTD-dev/missing automake-1.15
+AUTOCONF = ${SHELL} /home/idot/projects/popp/test/missing autoconf
+AUTOHEADER = ${SHELL} /home/idot/projects/popp/test/missing autoheader
+AUTOMAKE = ${SHELL} /home/idot/projects/popp/test/missing automake-1.15
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -249,7 +251,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /home/idot/projects/paraTD-dev/missing makeinfo
+MAKEINFO = ${SHELL} /home/idot/projects/popp/test/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -258,13 +260,13 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = paratd
-PACKAGE_BUGREPORT = larisch.larisch@kaust.edu.sa
-PACKAGE_NAME = paraTD
-PACKAGE_STRING = paraTD 0.1.0
-PACKAGE_TARNAME = paratd
+PACKAGE = tuckerdingens
+PACKAGE_BUGREPORT = mail@provider
+PACKAGE_NAME = TuckerDingens
+PACKAGE_STRING = TuckerDingens 0.0.1
+PACKAGE_TARNAME = tuckerdingens
 PACKAGE_URL = 
-PACKAGE_VERSION = 0.1.0
+PACKAGE_VERSION = 0.0.1
 PATH_SEPARATOR = :
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
@@ -279,11 +281,11 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
-VERSION = 0.1.0
-abs_builddir = /home/idot/projects/paraTD-dev
-abs_srcdir = /home/idot/projects/paraTD-dev
-abs_top_builddir = /home/idot/projects/paraTD-dev
-abs_top_srcdir = /home/idot/projects/paraTD-dev
+VERSION = 0.0.1
+abs_builddir = /home/idot/projects/popp/test
+abs_srcdir = /home/idot/projects/popp/test
+abs_top_builddir = /home/idot/projects/popp/test
+abs_top_srcdir = /home/idot/projects/popp/test
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -313,7 +315,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/idot/projects/paraTD-dev/install-sh
+install_sh = ${SHELL} /home/idot/projects/popp/test/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -322,8 +324,8 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-pkgpyexecdir = ${pyexecdir}/paratd
-pkgpythondir = ${pythondir}/paratd
+pkgpyexecdir = ${pyexecdir}/tuckerdingens
+pkgpythondir = ${pythondir}/tuckerdingens
 prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
@@ -340,7 +342,7 @@ top_builddir = .
 top_srcdir = .
 ACLOCAL_AMFLAGS = -Im4
 interface = interface
-SUBDIRS = $(paraTD) src interface
+SUBDIRS = $(TuckerDingens) src interface
 EXTRA_DIST = cython.am
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

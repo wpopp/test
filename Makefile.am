@@ -4,7 +4,7 @@ if USE_PYTHON
 interface = interface
 endif
 
-SUBDIRS = $(paraTD) src interface
+SUBDIRS = $(TuckerDingens) src interface
 
 
 EXTRA_DIST = cython.am

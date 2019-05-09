@@ -6,7 +6,7 @@ from libcpp.vector cimport vector
 def MatMult(A, v):
     cdef vector[double] result
 
-    gc_paraTD(A, v, result);
+    gc_MatMult(A, v, result);
 
-	return result
+    return result
 
